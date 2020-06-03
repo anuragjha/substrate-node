@@ -167,6 +167,18 @@ package = 'pallet-transaction-payment'
 tag = 'v2.0.0-rc2'
 version = '2.0.0-rc2'
 
+[dependencies.contracts]
+git = 'https://github.com/paritytech/substrate.git'
+default-features = false
+package = 'pallet-contracts'
+tag = 'v2.0.0-rc2'
+
+[dependencies.contracts-primitives]
+git = 'https://github.com/paritytech/substrate.git'
+default-features = false
+package = 'pallet-contracts-primitives'
+tag = 'v2.0.0-rc2'
+
 [features]
 default = ['std']
 std = [
@@ -195,6 +207,8 @@ std = [
     'timestamp/std',
     'transaction-payment/std',
     'template/std',
+    'contracts/std',
+    'contracts-primitives/std',
 ]
 
 [build-dependencies.wasm-builder-runner]
