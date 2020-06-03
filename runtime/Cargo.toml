@@ -179,6 +179,13 @@ default-features = false
 package = 'pallet-contracts-primitives'
 tag = 'v2.0.0-rc2'
 
+[dependencies.contracts-rpc-runtime-api]
+git = 'https://github.com/paritytech/substrate.git'
+default-features = false
+package = 'pallet-contracts-rpc-runtime-api'
+version = '0.8.0-rc2'
+tag = 'v2.0.0-rc2'
+
 [features]
 default = ['std']
 std = [
@@ -209,6 +216,7 @@ std = [
     'template/std',
     'contracts/std',
     'contracts-primitives/std',
+    'contracts-rpc-runtime-api/std',
 ]
 
 [build-dependencies.wasm-builder-runner]
